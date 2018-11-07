@@ -1,0 +1,110 @@
+/*!
+ * Start Bootstrap - Full HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+   // margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.full {
+	margin-top: 200px;
+    background: url('../images/care-cappital-building.png') no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+html, body, #wrapper { 
+	  height: 80%; 
+	  color: #000000;
+	  font-family: Lucida Console, Monaco, monospace;
+	}
+	body > #wrapper{ height: auto; min-height: 100%; }
+	/*
+	#footer{
+	  color: red; 
+	  clear: both;
+	  position: relative;
+	  z-index: 5px;
+	  height: 10%;
+	  margin-top: -4em;
+	  
+	  text-align: center;
+	 
+	}
+	
+	#footer img {
+	  margin-top: 15px;
+	}
+
+	*/
+
+	.btn { 
+		margin-top: 15px;
+	}
+	
+img {
+	margin: 10px 0 10px 0;
+}
+
+.well { margin: 10px 0 10px 0; } 
+
+/*
+/* hide the navbar background */
+.navbar  {
+    background: rgba(255, 255, 255, 0.0);
+    border-bottom: none;
+}
+
+/* Change the links to red */
+.navbar .container .collapse ul li a {
+    color: #cc0000;
+}
+.navbar .container .collapse ul li a:hover {
+  color: #ff0000;
+}
+
+#footer {
+    position: relative; 
+    bottom: 0%;
+}
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+#logo{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 4em;
+    opacity: 1;
+}
+#logo:hover { 
+  border: none; 
+  text-decoration: none; 
+  opacity: .9;
+}
+
+.navbar-header a {
+  text-decoration: none;
+}
+
+.blue { 
+  color: rgb(147, 152, 206 ); 
+}
+
+.red { 
+  color: rgb(206,34,57);
+}
+
+/* The menu icon for mobile navigation */
+.navbar .container .navbar-header .navbar-toggle{ border: 1px solid rgb(206,34,57); }
+.navbar .container .navbar-header .navbar-toggle .icon-bar {
+    background-color: rgb(206,34,57);
+}
+
+
+
+
+
+

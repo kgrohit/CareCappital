@@ -1,0 +1,13 @@
+.red { color: #fd6666; }
+.blue { color: #6666fd; }
+
+#logo {
+	font-size: 3em;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+

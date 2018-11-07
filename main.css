@@ -1,0 +1,546 @@
+/*++++++++++++++++++++++++++++++++++++++
+	Main
+=======================================*/
+
+	* { margin: 0;  }
+	
+	html, body, #wrapper { 
+	  height: 100%; 
+	  color: #777777;
+	  font-family: Lucida Console, Monaco, monospace;
+	}
+	
+	
+	body > #wrapper{ height: auto; min-height: 100%; }
+	
+	#footer{/**/
+	 
+	}
+	
+	#footer img {
+	  margin-top: 5px;
+	}
+	
+	
+	#thehead{
+	  min-width: 40%;
+	  padding: 25px;
+	  margin: 0 auto;
+	  width: 80%;
+	  border-left: 1px solid #777777;
+	  border-right: 1px solid #777777;
+	  border-bottom: 1px solid #777777;
+	  background-color: #EFEFEF;
+	  box-shadow: 5px 5px 1em #777;
+	}
+	
+	
+	
+	#save_status{
+	
+	  border-bottom: 1px solid #777777;
+	  border-left: 1px solid #777777;
+	  border-right: 1px solid #777777;
+	  width: 80%;
+	  margin: 0 auto;
+	  overflow: hidden;
+	  text-align: center;
+	  padding: 25px;
+	  background-color: #EFEFEF;
+	  box-shadow: 5px 5px 1em #777777;
+	  margin-bottom: 100px;
+	  
+	}
+	
+	#content{
+	  width: 95%;
+	  height: 60%;
+	  margin: 0 auto;
+	  font-family: "Times New Roman", Georgia, serif;
+	
+	}
+	
+	.error, #error{
+	  color: red;
+	}
+	/*Loading space*/
+	#loader { 
+	  display: inline;
+	}
+
+	
+	h1,h2,h3,h4 { 
+	  color: #1C1C1C; 
+	  text-align: center;
+	  margin: 20px 0 20px 0;
+	  font-family: "Lucida Sans Unicode", Monospace, sans-serif;
+	  
+	}
+	
+	
+	td {
+	  padding: 10px;
+	  border-bottom: 0.5px solid #777777;
+	  border-left: 0.5px solid #777777;
+	  border-right: 0.5px solid #777777;
+	  text-align: left;
+	}
+	
+	
+	th{
+	  
+	  border-bottom: 1px solid #444;
+	  padding: 10px;
+	  background-color: #444;
+	  color: white;
+	  
+	}
+	table {
+	border: 1px solid #555;
+	}
+	
+	
+	
+	
+	
+	
+	table{
+	  border-collapse: collapse;
+	  padding: 3px;
+	  width: 100%;
+	  margin: 3px 0 3px 0;
+	  background-color: #FFFFFF;
+	  
+	  
+	}
+	
+	
+	
+	
+	.hover:hover, #hover:hover{
+		cursor: pointer;
+		background-color:#777777;
+		color: #FFFFFF;
+	}
+	
+	
+	
+	tr:nth-child(odd) {
+	  background-color: #ddd;
+	}
+	
+	
+	
+	#col1{
+	 float: left;
+	 text-align: right;
+	 
+	}
+	
+	#col2 {
+	  float: left;
+	  margin: 0;
+	  text-align: right;
+	}
+	
+	#col3 {
+	  float: left;
+	  margin: 0 0 0 200px;
+	  text-align: right;
+	}
+	
+	
+	#header{
+	  min-height: 100px;
+	  padding: 0 20% 10px 20%;
+	  background-color: #fff;
+	  border-bottom: 1px solid black;
+	  position: relative;
+	}
+	
+	
+	
+	
+	
+	/*#search{
+	  margin: 0 0 0 100px;
+	}*/
+	
+	/* DatePicker Container */
+	.ui-datepicker {
+	    width: 216px;
+	    height: auto;
+	    margin: 5px auto 0;
+	    font: 9pt Arial, sans-serif;
+	    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+	    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+	    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+	    background-color: #777;
+	    color: #fff;
+	}
+	.ui-datepicker { width: auto; } 
+	.ui-icon-circle-triangle-w { float:left; color: #fff; cursor: pointer; }
+	.ui-icon-circle-triangle-e { float: right; color: #fff; cursor: pointer;}
+	.ui-icon-circle-triangle-e:hover { color: #2FADE2; }
+	.ui-icon-circle-triangle-w:hover { color: #2FADE2; }
+	.ui-datepicker-title { text-align: center; } 
+
+/*++++++++++++++++++++++++++++++++++++++
+	CMS
+=======================================*/
+
+	/*#cms tr td {   }
+	
+	#cms tr td { text-align: center; }
+	
+	#cms tr .table-top {font-size: 15pt;  }
+	
+	#cms tr .thead { border: 1px solid white; }*/
+	
+
+	
+
+	.skip {
+	  color:  red; 
+	  font-weight: bold;
+	}
+	
+	.high { font-weight: bold; color: red; }
+	.low { text-decoration: underline; color:blue; }
+	
+	#PatientToolbar {
+		text-align: left;
+		padding: 0 15px 15px 15px;
+		
+		
+	}
+	
+	#PatientToolbar * {
+		margin: 0 15px 0 15px;
+	}
+
+
+/*++++++++++++++++++++++++++++++++++++++
+	Inputs
+=======================================*/
+label:hover, label:active, input:hover+label, input:active+label {
+    color:#2FADE2;
+    cursor: pointer;
+}
+
+
+
+input[type='text'], select, input[type='password'] {
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 2px 3px  #777;
+  border-radius: 5px;
+  background-color: #fff;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 2px solid #777;
+  border-left: 1px solid white;
+  
+}
+
+#col1 input[type='text'], #col1 select, #col1 input[type='password'], #col2 input[type='text'], #col2 select, #col2 input[type='password'], #col2 select {
+  min-width: 250px;
+}
+
+input[type='text']:focus {
+  box-shadow: 0 0 1em #3D82A9;
+}
+
+input[type='radio']:focus, input[type='checkbox']:focus {
+  background: #3d82a9;
+  
+}
+
+
+
+input[type='button'], input[type='submit'] {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+input[type='button']:active, input[type='submit']:active {
+  position:relative;
+  box-shadow: 0 0 1em #3D82A9;
+  top:1px;
+  
+}
+input[type='button']:hover, input[type='submit']:hover{
+  	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);*/
+	background-color: #dfdfdf;
+	color: #1C1C1C;
+}
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++
+	Links
+=======================================*/
+	
+	a{
+	  color: #2fade2;
+	  text-decoration: none;
+	  font-family: Arial, Helvetica, sans-serif;
+	  font-weight: bold;
+	}
+	
+	a:active{ color: white;}
+	
+	a:hover{
+	  color: #777;
+	  text-decoration: underline;
+	}
+	
+	#page:hover {
+	  cursor: pointer; 
+	  text-decoration: underline; 
+	}
+	
+/*++++++++++++++++++++++++++++++++++++++
+	highlight text
+=======================================*/
+
+::selection {
+  background: #DD0000; /* WebKit/Blink Browsers */
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #DD0000; /* Gecko Browsers */
+  color: #ffffff;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++
+	NAV
+=======================================*/
+	nav { position: absolute; bottom: 1px; right: 20%; padding: 0; margin: 0; }
+	
+	nav ul ul {
+		display: none;
+		float: right;
+	}
+	
+		nav ul li:hover > ul {
+			display: block;
+		}
+		
+	nav ul {
+		background: #FFF; 
+		list-style: none;
+		position: relative;
+		display: inline-table;
+		color: #fff;
+		padding: 0;
+		margin: 0;
+		
+	}
+		nav ul:after {
+			content: ""; clear: both; display: block;
+		}
+		
+	nav ul li {
+		float: right;
+		position: relative;
+		padding: 0;
+		margin: 0 2px 0 2px;
+		//color: red;
+		//border-radius: 5px;
+	}
+		nav ul li:hover {
+			background: #FFF;
+			
+		}
+			nav ul li:hover a {
+				color: #DD0000;
+			}
+		
+		nav ul li a {
+			display: block; 
+			text-decoration: none;
+			padding: 10px;
+			border-radius: 5px;
+			color: #DD0000;
+		}
+	nav ul li:hover { 
+		//border-left: 1px solid #DD0000;
+		//border-top: 1px solid #DD0000;
+		//border-right: 1px solid #DD0000;
+	}
+	nav ul li ul {
+	}
+		
+	nav ul ul {
+		margin: 0 2px 0 2px;
+		background: #FFF; 
+		position: absolute; 
+		top: 100%;
+		width: 100%;
+		color: #DD0000;
+		border-left: 1px solid #DD0000;
+		border-bottom: 1px solid #DD0000;
+		border-right: 1px solid #DD0000;
+		}
+		nav ul ul li {
+			text-align: center;
+			float: none; 
+			position: relative;
+		}/*
+			nav ul ul li a {
+				color: red;
+				background: white;
+			}	
+				nav ul ul li a:hover {
+					background: red;
+					color: white;
+					
+					
+				}*/
+				
+	nav ul ul ul {
+		position: absolute; 
+		left: 100%; 
+		top:0; 
+		background-color: #000;
+	}
+	
+	nav ul li ul li a{
+	  color: #fff;
+	  background-color: #fff;
+	}
+	
+	nav ul li ul li a:hover {
+	  background-color: #DD0000;
+	  color: #fff;
+	}
+	
+/*=========================================================================
+		PRINTING CSS
+=========================================================================*/
+@media print {
+
+/* Save status to 100% and Hiding the header, footer, and toolbar area*/
+
+#save_status { width: 95%; }
+#thehead { display: none; }
+#header { display: none; }
+#footer { display: none; } 
+	
+}
+
+
+
+/*=========================================================================
+		MOBILE CSS
+=========================================================================*/
+	@media only screen and (max-device-width: 480px) {
+		#save_status {
+		  width: 95%;
+		  padding: 0;
+		  margin-left: auto;
+		  margin-right: auto;
+		  text-align: center;
+		}
+		
+		#save_status #links a {
+		  font-size: 1.3em;
+		}
+		
+		#thehead {
+		  width: 95%;
+		  margin-left: auto;
+		  margin-right: auto;
+		  text-align: center;
+		}
+		#content, #wrapper {
+		  width: 100%;
+		  min-width: 100%;
+		  margin: 0;
+		  padding: 0;
+		   margin-left: auto;
+		  margin-right: auto;
+		  
+		}
+		
+		#header{
+		  width: 100%;
+		  padding: 0;
+		  min-height: 100px;
+		  margin: 0 auto;
+		  background-color: #fff;
+		  border-bottom: 1px solid black;
+		  position: relative;
+		  text-align: right;
+		}
+		
+		#header img, #header nav {
+		  position: inherit;
+		  text-align: center;
+		  width: 100%;
+		}
+		
+		#header nav { text-align: center; margin: 0 auto;}
+		#header nav ul { width: 100%;}
+		#header nav ul li {
+		  width: 20%;
+		}
+		
+		#footer {
+		  background-color: #1C1C1C;
+
+ 		  width: 100%;
+		  position: relative;
+		  z-index: 10;
+		  height: 5%;
+		  margin-top: -5%;
+		  text-align: center;
+		  
+		}
+		
+		.hide-this { 
+		  visibility: none;
+		  display: none;
+	
+		}
+		
+		
+	}
+@media only screen and (min-device-width: 500px) and (max-device-width: 999px) {
+	#save_status { 
+		width: 95%;
+	}
+	#thehead {
+		width: 95%;
+	} 
+}

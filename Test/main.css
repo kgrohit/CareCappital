@@ -1,0 +1,22 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.blue {
+	color: rgb(147,152,206);
+}
+
+
+
+.red {
+	color: rgb(206,34,57);
+}
+
+#client-container ul  li {
+	cursor:pointer;
+}
+
+#client-container ul li:hover {
+	background-color: rgb(147,152,206); 
+	color: #fff;
+}

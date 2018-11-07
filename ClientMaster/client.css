@@ -1,0 +1,17 @@
+input[type='text']{
+  margin: 5px;
+}
+
+select{
+  margin: 5px;
+  background-color: #ccc;
+}
+
+.center-text{
+  margin: 5px 5px 5px 150px;
+}
+
+.tab {
+  margin: 0 20px 0 20px;
+}
+
